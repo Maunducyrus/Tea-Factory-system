@@ -29,7 +29,7 @@
 }
  /* Home Page Styles */
  .hero {
-    background: url('https://source.unsplash.com/1600x900/?tea,plantation') center/cover no-repeat;
+    background: url('images/tea-plantation.jpg') center/cover no-repeat;
     height: 70vh;
     display: flex;
     align-items: center;
