@@ -32,7 +32,7 @@
  /* Home Page Styles */
  .hero {
     background: url('images/tea-plantation.jpg') center/cover no-repeat;
-    height: 50vh;
+    height: 72vh;
     display: flex;
     align-items: center;
     justify-content: center;
