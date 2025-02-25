@@ -27,3 +27,19 @@
     background-color: #d4ac0d;
     border-color: #d4ac0d;
 }
+ /* Home Page Styles */
+ .hero {
+    background: url('https://source.unsplash.com/1600x900/?tea,plantation') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.features {
+    padding: 50px 0;
+    text-align: center;
+}
