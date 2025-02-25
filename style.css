@@ -44,6 +44,53 @@
     text-align: center;
 }
 
+/* Page Sections */
+.page-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+.page-section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+.page-section p {
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* About Us Section */
+#about {
+    background-color: #f8f9fa;
+    padding: 80px 20px;
+}
+
+/* Products Section */
+#products {
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+
+/* Farmers Section */
+#farmers {
+    background-color: #f8f9fa;
+    padding: 80px 20px;
+}
+
+/* Orders Section */
+#orders {
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+
+/* Reports Section */
+#reports {
+    background-color: #f8f9fa;
+    padding: 80px 20px;
+}
+
  /* Footer Styles */
  .footer {
     background-color: #3f8205;
