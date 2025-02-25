@@ -93,6 +93,35 @@
     padding: 80px 20px;
 }
 
+/* Contact Section */
+#contact {
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+#contact .form-label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+#contact .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+#contact button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
  /* Footer Styles */
  .footer {
     background-color: #3f8205;
