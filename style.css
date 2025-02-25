@@ -3,6 +3,7 @@
     background-color: #3f8205; /* Dark Blue */
     padding: 15px 0;
     position: fixed;
+    width: 100%;
 }
 .navbar-brand {
     font-size: 1.5rem;
