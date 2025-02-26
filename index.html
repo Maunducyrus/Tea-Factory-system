@@ -92,6 +92,75 @@
         <h2>Reports</h2>
         <p>Access detailed reports on tea production, sales, and farmer contributions.</p>
     </section> -->
+    
+    <!-- Orders Section -->
+<section id="orders" class="page-section bg-light">
+    <div class="container">
+        <h2 class="text-center">Place Your Order</h2>
+        <p class="text-center">Order your favorite tea with ease.</p>
+
+        <!-- Order Form -->
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="customerName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="customerName" placeholder="Enter your full name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="customerPhone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="customerPhone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="col-md-6">
+                <label for="teaType" class="form-label">Tea Type</label>
+                <select class="form-control" id="teaType">
+                    <option>Black Tea</option>
+                    <option>Green Tea</option>
+                    <option>Herbal Tea</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="quantity" class="form-label">Quantity (Kg)</label>
+                <input type="number" class="form-control" id="quantity" placeholder="Enter quantity" required>
+            </div>
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Place Order</button>
+            </div>
+        </form>
+
+        <!-- Order Summary -->
+        <h3 class="text-center mt-5">Recent Orders</h3>
+        <table class="table table-bordered table-striped mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Tea Type</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Black Tea</td>
+                    <td>5 Kg</td>
+                    <td><span class="badge bg-success">Delivered</span></td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Green Tea</td>
+                    <td>2 Kg</td>
+                    <td><span class="badge bg-warning">Pending</span></td>
+                </tr>
+                <tr>
+                    <td>David Johnson</td>
+                    <td>Herbal Tea</td>
+                    <td>3 Kg</td>
+                    <td><span class="badge bg-danger">Cancelled</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
 
        <!-- Contact Section -->
        <section id="contact" class="page-section bg-light">
