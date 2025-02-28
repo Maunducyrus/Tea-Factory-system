@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchOrder");
     const orderTable = document.querySelector(".order-table tbody");
 
-    // ORDER FORM VALIDATION & ALERT
+    // ✅ ORDER FORM VALIDATION & ALERT
     orderForm.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent page refresh when submitting the form
 
@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Validate that all fields are filled
         if (name === "" || phone === "" || teaType === "" || quantity === "") {
-            alert(" Please fill in all fields before placing your order.");
+            alert("⚠️ Please fill in all fields before placing your order.");
             return; // Stop function execution if any field is empty
         }
 
         // Display confirmation alert to the user
-        alert(` Order placed successfully!\n\n Name: ${name}\n Tea Type: ${teaType}\n📌 Quantity: ${quantity} Kg`);
+        alert(`✅ Order placed successfully!\n\n📌 Name: ${name}\n📌 Tea Type: ${teaType}\n📌 Quantity: ${quantity} Kg`);
 
-        // ADD NEW ORDER TO THE TABLE
+        // ✅ ADD NEW ORDER TO THE TABLE
         const newRow = document.createElement("tr");
         newRow.innerHTML = `
             <td>${name}</td>
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         orderForm.reset(); // Clear form fields after submission
     });
 
-    // ORDER SEARCH FUNCTION (Live Filtering)
+    // ✅ ORDER SEARCH FUNCTION (Live Filtering)
     searchInput.addEventListener("input", function () {
         const searchText = searchInput.value.toLowerCase(); // Convert search input to lowercase
         const rows = orderTable.getElementsByTagName("tr"); // Get all rows in the table
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // ORDER CANCELLATION FEATURE
+    // ✅ ORDER CANCELLATION FEATURE
     orderTable.addEventListener("click", function (event) {
         // Check if the clicked element is a "Cancel" button
         if (event.target.classList.contains("cancel-btn")) {
@@ -57,4 +57,55 @@ document.addEventListener("DOMContentLoaded", function () {
             event.target.remove(); // Remove the "Cancel" button after clicking
         }
     });
+
+    // ============================== //
+    // ✅ "ADD TO CART" SYSTEM ADDED //
+    // ============================== //
+
+    const cart = []; // Cart array to store selected products
+    const cartContainer = document.getElementById("cartItems"); // List container for cart items
+    const cartTotal = document.getElementById("cartTotal"); // Total amount display
+    const addToCartButtons = document.querySelectorAll(".add-to-cart"); // "Add to Cart" buttons
+
+    // ✅ ADD TO CART FUNCTIONALITY
+    addToCartButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const productName = this.getAttribute("data-product"); // Get product name
+            const productPrice = parseFloat(this.getAttribute("data-price")); // Get product price
+
+            // Add item to cart array
+            cart.push({ name: productName, price: productPrice });
+
+            // Update cart UI
+            updateCart();
+        });
+    });
+
+    // ✅ FUNCTION TO UPDATE CART UI
+    function updateCart() {
+        cartContainer.innerHTML = ""; // Clear cart display
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            total += item.price; // Calculate total price
+
+            // Create list item for cart
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `${item.name} - $${item.price} 
+                <button class="btn btn-danger btn-sm remove-item" data-index="${index}">Remove</button>`;
+            cartContainer.appendChild(listItem);
+        });
+
+        // Update total price
+        cartTotal.textContent = `$${total.toFixed(2)}`;
+        
+        // Add event listeners to remove buttons
+        document.querySelectorAll(".remove-item").forEach(button => {
+            button.addEventListener("click", function () {
+                const index = this.getAttribute("data-index");
+                cart.splice(index, 1); // Remove item from cart
+                updateCart(); // Refresh cart UI
+            });
+        });
+    }
 });
