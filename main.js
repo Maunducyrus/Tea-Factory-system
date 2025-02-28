@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         orderForm.reset();
     });
 
-    // ✅ ORDER SEARCH FUNCTION
+    // ORDER SEARCH FUNCTION
     searchInput.addEventListener("input", function () {
         const searchText = searchInput.value.toLowerCase();
         const rows = orderTable.getElementsByTagName("tr");
