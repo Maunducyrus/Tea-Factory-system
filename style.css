@@ -98,6 +98,10 @@
     margin: 10px 0;
     font-size: 18px;
 }
+.product-card p {
+    color: #666;
+    font-size: 14px;
+}
 
 /* Farmers Section */
 #farmers {
