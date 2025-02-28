@@ -100,6 +100,10 @@
     border-collapse: collapse;
     margin-top: 20px;
 }
+.order_table th,
+.order_table td {
+    
+}
 
 /* Reports Section */
 #reports {
