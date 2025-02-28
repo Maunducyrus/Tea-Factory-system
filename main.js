@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // ✅ Display confirmation message
+        //  Display confirmation message
         alert(`Order placed successfully!\n\nName: ${name}\nTea Type: ${teaType}\nQuantity: ${quantity} Kg`);
 
         // ✅ Add new order to the table
