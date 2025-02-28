@@ -275,5 +275,8 @@
     cursor: pointer;
     transition: 0.3s ease;
 }
+#cartItems li button:hover {
+    background-color: #b02a37;
+}
 
 
