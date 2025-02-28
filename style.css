@@ -87,6 +87,9 @@
     background-color: #ffffff;
     padding: 80px 20px;
 }
+#searchOrder {
+    width: 100%;
+}
 
 /* Reports Section */
 #reports {
