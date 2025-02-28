@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //  Display confirmation message
         alert(`Order placed successfully!\n\nName: ${name}\nTea Type: ${teaType}\nQuantity: ${quantity} Kg`);
 
-        // ✅ Add new order to the table
+        //  Add new order to the table
         const newRow = document.createElement("tr");
         newRow.innerHTML = `
             <td>${name}</td>
