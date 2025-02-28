@@ -107,6 +107,10 @@
     font-size: 16px;
     font-weight: bold;
 }
+.product-card .order-btn {
+    width: 100%;
+    margin-top: 10px;
+}
 
 /* Farmers Section */
 #farmers {
