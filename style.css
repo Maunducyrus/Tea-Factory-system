@@ -252,5 +252,8 @@
     font-weight: bold;
     margin-bottom: 20px;
 }
+#cartItems {
+    list-style: none;
+}
 
 
