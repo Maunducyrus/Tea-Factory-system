@@ -58,8 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // "ADD TO CART" SYSTEM ADDED 
-
+    // "ADD TO CART" SYSTEM  
     const cart = []; // Cart array to store selected products
     const cartContainer = document.getElementById("cartItems"); // List container for cart items
     const cartTotal = document.getElementById("cartTotal"); // Total amount display
