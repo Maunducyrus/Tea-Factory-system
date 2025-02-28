@@ -94,6 +94,9 @@
     height: 200px;
     border-radius: 8px;
 }
+.product-card h4 {
+    margin: 10px 0;
+}
 
 /* Farmers Section */
 #farmers {
