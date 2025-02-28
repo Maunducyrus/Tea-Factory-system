@@ -239,7 +239,9 @@
     padding: 5px 10px;
 }
 #cart {
-    
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 
