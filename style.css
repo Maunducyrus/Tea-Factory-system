@@ -96,7 +96,9 @@
     border-radius: 5px;
 }
 .order_table {
-    
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 /* Reports Section */
