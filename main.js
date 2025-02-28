@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // ✅ ORDER CANCELLATION FEATURE
+    // ORDER CANCELLATION FEATURE
     orderTable.addEventListener("click", function (event) {
         if (event.target.classList.contains("cancel-btn")) {
             const row = event.target.closest("tr");
