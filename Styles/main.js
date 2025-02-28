@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchOrder");
     const orderTable = document.querySelector(".order-table tbody");
 
-    //  ORDER FORM VALIDATION & ALERT
+    // ORDER FORM VALIDATION & ALERT
     orderForm.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent page refresh when submitting the form
 
