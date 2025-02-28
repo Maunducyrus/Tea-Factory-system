@@ -279,7 +279,9 @@
     background-color: #b02a37;
 }
 #cartTotal {
-    
+    font-size: 20px;
+    font-weight: bold;
+    color: #28a745;
 }
 
 
