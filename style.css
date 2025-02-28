@@ -102,7 +102,8 @@
 }
 .order_table th,
 .order_table td {
-    
+    padding: 10px;
+    border: 1px solid #ddd;
 }
 
 /* Reports Section */
