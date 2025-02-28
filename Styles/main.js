@@ -88,13 +88,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Create list item for cart
             const listItem = document.createElement("li");
-            listItem.innerHTML = `${item.name} - $${item.price} 
+            listItem.innerHTML = `${item.name} - Ksh ${item.price} 
                 <button class="btn btn-danger btn-sm remove-item" data-index="${index}">Remove</button>`;
             cartContainer.appendChild(listItem);
         });
 
         // Update total price
-        cartTotal.textContent = `$${total.toFixed(2)}`;
+        cartTotal.textContent = `Ksh ${total.toFixed(2)}`;
         
         // Add event listeners to remove buttons
         document.querySelectorAll(".remove-item").forEach(button => {
