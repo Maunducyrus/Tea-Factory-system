@@ -86,6 +86,9 @@
     margin-bottom: 20px;
     transition: 0.3s ease-in-out;
 }
+.product-card:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
 
 /* Farmers Section */
 #farmers {
