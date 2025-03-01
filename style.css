@@ -69,6 +69,26 @@
     background-color: #f8f9fa;
     padding: 80px 20px;
 } */
+#about {
+    background-color: #f8f9fa;
+}
+
+#about h2 {
+    font-weight: bold;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 
 /* Products Section */
 #products {
