@@ -284,4 +284,22 @@
     color: #28a745;
 }
 
+/* Farmers Section */
+.farmer-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#searchFarmer {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+}
+
 
