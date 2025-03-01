@@ -12,33 +12,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Farmers Section -->
     <section id="farmers" class="page-section">
         <div class="container">
             <h2 class="text-center">👨‍🌾 Farmers Registration</h2>
-            
+
             <!-- Farmer Registration Form -->
             <form id="farmerForm" class="farmer-form shadow p-4 rounded">
                 <div class="mb-3">
                     <label for="farmerName" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="farmerName" placeholder="Enter full name" required>
+                    <input type="text" class="form-control" id="farmerName" required>
                 </div>
                 <div class="mb-3">
                     <label for="farmerPhone" class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control" id="farmerPhone" placeholder="Enter phone number" required>
+                    <input type="tel" class="form-control" id="farmerPhone" required>
                 </div>
                 <div class="mb-3">
                     <label for="farmerLocation" class="form-label">Location</label>
-                    <input type="text" class="form-control" id="farmerLocation" placeholder="Enter location" required>
+                    <input type="text" class="form-control" id="farmerLocation" required>
                 </div>
                 <div class="mb-3">
                     <label for="teaCapacity" class="form-label">Tea Supply Capacity (Kg)</label>
-                    <input type="number" class="form-control" id="teaCapacity" placeholder="Enter capacity in Kg" required>
+                    <input type="number" class="form-control" id="teaCapacity" required>
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Register Farmer</button>
             </form>
 
-            <!-- Farmer List -->
             <h3 class="text-center mt-5">📋 Registered Farmers</h3>
             <input type="text" id="searchFarmer" class="form-control mb-3" placeholder="🔍 Search by Name or Location">
 
@@ -49,6 +47,8 @@
                         <th>Phone</th>
                         <th>Location</th>
                         <th>Supply Capacity</th>
+                        <th>Total Tea Supplied</th>
+                        <th>Payment (Ksh)</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -56,13 +56,28 @@
                     <!-- Farmers will be added here dynamically -->
                 </tbody>
             </table>
+
+            <!-- Tea Supply Form -->
+            <h3 class="text-center mt-5">🌱 Log Tea Supply</h3>
+            <form id="supplyForm" class="shadow p-4 rounded">
+                <div class="mb-3">
+                    <label for="farmerSelect" class="form-label">Select Farmer</label>
+                    <select class="form-control" id="farmerSelect" required></select>
+                </div>
+                <div class="mb-3">
+                    <label for="supplyDate" class="form-label">Supply Date</label>
+                    <input type="date" class="form-control" id="supplyDate" required>
+                </div>
+                <div class="mb-3">
+                    <label for="supplyQuantity" class="form-label">Quantity (Kg)</label>
+                    <input type="number" class="form-control" id="supplyQuantity" required>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Add Supply</button>
+            </form>
         </div>
     </section>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JS -->
     <script src="farmers.js"></script>
 </body>
 </html>
