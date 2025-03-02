@@ -69,26 +69,46 @@
     background-color: #f8f9fa;
     padding: 80px 20px;
 } */
- #about {
+/* ABOUT US SECTION */
+#about {
     background-color: #f8f9fa;
+    padding: 60px 0;
 }
 
 #about h2 {
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #2c3e50;
 }
 
 #about p {
     font-size: 1.1rem;
-    color: #555;
+    color: #444;
+    line-height: 1.6;
 }
 
-#about img {
-    max-width: 100%;
+/* Image Styling */
+.about-img {
+    max-width: 90%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Responsive Fix */
+@media (max-width: 768px) {
+    #about .row {
+        text-align: center;
+    }
+
+    #about .col-lg-6 {
+        margin-bottom: 20px;
+    }
+
+    .about-img {
+        max-width: 100%;
+    }
+}
 
 /* Products Section */
 #products {
