@@ -183,7 +183,57 @@
 }
 
 /* Reports Section */
+/* Reports Section */
+#reports {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
 
+#reports h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+/* Tables */
+#reports table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#reports th {
+    background-color: #2c3e50 !important;
+    color: white;
+    text-align: center;
+}
+
+#reports td, #reports th {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Cards */
+#reports .card {
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Export & Filter Buttons */
+#reports .btn {
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* Search & Filter Inputs */
+#searchReport, #dateFilter {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
 /* Contact Section */
 #contact {
