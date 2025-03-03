@@ -59,6 +59,8 @@ function exportToPDF() {
     let element = document.getElementById("reports");
     if (element) {
         html2pdf(element);
+    } else {
+        
     }
     
 }
