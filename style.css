@@ -1,5 +1,6 @@
  /* Custom Styles for Navbar */
  .navbar {
+    top: 0;
     background-color: #3f8205; /* Dark Blue */
     padding: 15px 0;
     position: fixed;
