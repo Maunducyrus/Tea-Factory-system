@@ -1,3 +1,6 @@
+ body {
+        padding-top: 70px; /* Adjust according to navbar height */
+    }
  /* Custom Styles for Navbar */
  .navbar {
     top: 0;
