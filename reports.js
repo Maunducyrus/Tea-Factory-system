@@ -60,7 +60,7 @@ function exportToPDF() {
     if (element) {
         html2pdf(element);
     } else {
-        
+        console.log("Reports section not found for PDF export.")
     }
     
 }
