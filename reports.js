@@ -57,5 +57,8 @@ function exportToCSV() {
 // Export to PDF
 function exportToPDF() {
     let element = document.getElementById("reports");
-    html2pdf(element);
+    if (element) {
+        html2pdf(element);
+    }
+    
 }
