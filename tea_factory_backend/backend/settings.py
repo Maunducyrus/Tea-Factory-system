@@ -88,6 +88,7 @@ DATABASES = {
         'NAME': 'tea_factory_db',
         'USER': 'root',
         'PASSWORD': '',
+        'HOST': '127.0.0.1',
     }
 }
 
