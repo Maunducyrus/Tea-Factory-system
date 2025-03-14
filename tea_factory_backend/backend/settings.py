@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',  #Django REST framework
-    'api',
+    'api',             #cutom app for api
     'corsheaders'
 ]
 
