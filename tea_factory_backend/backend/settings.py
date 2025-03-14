@@ -54,7 +54,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    
+        "http://localhost:3000",  # If frontend runs on React/Vue
+        "http://127.0.0.1:5500",  # If frontend is just HTML/JS
 ]
 
 ROOT_URLCONF = 'backend.urls'
