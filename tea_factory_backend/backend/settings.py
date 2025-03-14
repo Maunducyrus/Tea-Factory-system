@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',  #Django REST framework
     'api',             #cutom app for api
-    'corsheaders'
+    'corsheaders'      #Handles frontend-backend communication
 ]
 
 MIDDLEWARE = [
