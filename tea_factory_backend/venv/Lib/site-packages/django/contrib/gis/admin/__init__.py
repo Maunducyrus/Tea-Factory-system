@@ -1,16 +1,29 @@
 from django.contrib.admin import (
-    HORIZONTAL, VERTICAL, AdminSite, ModelAdmin, StackedInline, TabularInline,
-    action, autodiscover, display, register, site,
+    HORIZONTAL,
+    VERTICAL,
+    AdminSite,
+    ModelAdmin,
+    StackedInline,
+    TabularInline,
+    action,
+    autodiscover,
+    display,
+    register,
+    site,
 )
-from django.contrib.gis.admin.options import (
-    GeoModelAdmin, GISModelAdmin, OSMGeoAdmin,
-)
-from django.contrib.gis.admin.widgets import OpenLayersWidget
+from django.contrib.gis.admin.options import GISModelAdmin
 
 __all__ = [
-    'HORIZONTAL', 'VERTICAL', 'AdminSite', 'ModelAdmin', 'StackedInline',
-    'TabularInline', 'action', 'autodiscover', 'display', 'register', 'site',
-    'GISModelAdmin', 'OpenLayersWidget',
-    # RemovedInDjango50Warning.
-    'GeoModelAdmin', 'OSMGeoAdmin',
+    "HORIZONTAL",
+    "VERTICAL",
+    "AdminSite",
+    "ModelAdmin",
+    "StackedInline",
+    "TabularInline",
+    "action",
+    "autodiscover",
+    "display",
+    "register",
+    "site",
+    "GISModelAdmin",
 ]
