@@ -29,7 +29,6 @@ class ReportSerializer(serializers.ModelSerializer):
 # UserProfile Serializer
 class UserProfileSerializer(serializers.ModelSerializer):
     username = serializers.ReadOnlyField(source='user.username')
-
     class Meta:
         model = UserProfile
         fields = '__all__'                
