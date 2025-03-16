@@ -13,3 +13,12 @@ class Product(models.Model):
         return self.name
     
     # suppliers models
+class Farmer(models.Model):
+    name = models.CharField(max_length=100)
+    phone_number = models.CharField(max_length=15, unique=True)
+    email = models.EmailField(unique=True, null=True, blank=True)
+    location = models.CharField(max_length=200)
+    total_supplied_kg = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return self.name
