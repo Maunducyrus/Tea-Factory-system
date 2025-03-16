@@ -47,3 +47,15 @@ def register_user(request):
     username = request.data.get("username")
     password = request.data.get("password")
     email = request.data.get("email")    
+
+    if not username or not password:
+        return Response({"error": "Username and Password are required"}, status=400)
+
+    if User.objects.filter(username=username).exists():
+        return Response({"error": "Username already exists"}, status=400)
+
+    user = User.objects.create_user(username=username, password=password, email=email)
+    token, created = Token.objects.get_or_create(user=user)
+    
+    return Response({"message": "User registered successfully", "token": token.key})
+
