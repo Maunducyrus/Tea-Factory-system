@@ -13,3 +13,10 @@ class ProductAdmin(admin.ModelAdmin):
 class FarmerAdmin(admin.ModelAdmin):
     list_display = ('name', 'phone_number', 'email', 'location', 'total_supplied_kg')
     search_fields = ('name', 'phone_number')
+
+# Register Order Model
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ('customer_name', 'product', 'quantity_kg', 'total_price', 'status', 'order_date')
+    list_filter = ('status',)
+    search_fields = ('customer_name', 'product__name')    
