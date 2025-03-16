@@ -13,5 +13,5 @@ urlpatterns = [
     path('', include(router.urls)),  # Register all API routes without the 'api/' prefix
     path('register/', register_user, name="register"),
     path('login/', login_user, name="login"),
-    path('api/logout/', logout_user, name="logout"),
+    path('logout/', logout_user, name="logout"),
 ]
