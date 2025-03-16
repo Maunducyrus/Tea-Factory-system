@@ -19,4 +19,9 @@ class FarmerAdmin(admin.ModelAdmin):
 class OrderAdmin(admin.ModelAdmin):
     list_display = ('customer_name', 'product', 'quantity_kg', 'total_price', 'status', 'order_date')
     list_filter = ('status',)
-    search_fields = ('customer_name', 'product__name')    
+    search_fields = ('customer_name', 'product__name')
+
+# Register Report Model
+@admin.register(Report)
+class ReportAdmin(admin.ModelAdmin):
+    list_display = ('report_type', 'total_orders', 'total_kg_sold', 'total_revenue', 'generated_at')        
