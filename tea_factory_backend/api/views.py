@@ -71,6 +71,13 @@ def login_user(request):
         return Response({"message": "Login successful", "token": token.key})
     else:
         return Response({"error": "Invalid credentials"}, status=400)
+    
+# Logout API
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def logout_user(request):
+    request.auth.delete()
+    return Response({"message": "Logout successful"})    
 
     
 
