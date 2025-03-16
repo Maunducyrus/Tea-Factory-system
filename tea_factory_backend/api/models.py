@@ -49,3 +49,12 @@ class Order(models.Model):
         return f"Order by {self.customer_name} - {self.product.name}"
 
 # Reports Model (Analytics & Records)
+class Report(models.Model):
+    report_type = models.CharField(max_length=100)  # e.g., Sales, Farmer Supply
+    total_orders = models.PositiveIntegerField(default=0)
+    total_kg_sold = models.PositiveIntegerField(default=0)
+    total_revenue = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
+    generated_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.report_type} Report - {self.generated_at.strftime('%Y-%m-%d')}"
