@@ -24,4 +24,11 @@ class OrderAdmin(admin.ModelAdmin):
 # Register Report Model
 @admin.register(Report)
 class ReportAdmin(admin.ModelAdmin):
-    list_display = ('report_type', 'total_orders', 'total_kg_sold', 'total_revenue', 'generated_at')        
+    list_display = ('report_type', 'total_orders', 'total_kg_sold', 'total_revenue', 'generated_at')
+
+# Register UserProfile Model
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = ('user', 'role', 'phone_number', 'address')
+    list_filter = ('role',)
+    search_fields = ('user__username', 'phone_number')        
