@@ -12,6 +12,6 @@ router.register(r'users', UserProfileViewSet)
 urlpatterns = [
     path('', include(router.urls)),  # Register all API routes without the 'api/' prefix
     path('register/', register_user, name="register"),
-    path('api/login/', login_user, name="login"),
+    path('login/', login_user, name="login"),
     path('api/logout/', logout_user, name="logout"),
 ]
