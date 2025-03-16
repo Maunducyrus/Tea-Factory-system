@@ -59,3 +59,19 @@ class Report(models.Model):
 
     def __str__(self):
         return f"{self.report_type} Report - {self.generated_at.strftime('%Y-%m-%d')}"
+    
+class UserProfile(models.Model):
+    ROLE_CHOICES = [
+        ('admin', 'Admin'),
+        ('staff', 'Staff'),
+        ('farmer', 'Farmer'),
+        ('customer', 'Customer'),
+    ]
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='customer')
+    phone_number = models.CharField(max_length=15, blank=True, null=True)
+    address = models.CharField(max_length=255, blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.role}"
