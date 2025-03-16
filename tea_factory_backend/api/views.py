@@ -66,4 +66,11 @@ def login_user(request):
     password = request.data.get("password")
 
     user = authenticate(username=username, password=password)
+    if user:
+        token, created = Token.objects.get_or_create(user=user)
+        return Response({"message": "Login successful", "token": token.key})
+    else:
+        return Response({"error": "Invalid credentials"}, status=400)
+
+    
 
