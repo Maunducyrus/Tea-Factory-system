@@ -59,3 +59,11 @@ def register_user(request):
     
     return Response({"message": "User registered successfully", "token": token.key})
 
+# Login API
+@api_view(['POST'])
+def login_user(request):
+    username = request.data.get("username")
+    password = request.data.get("password")
+
+    user = authenticate(username=username, password=password)
+
