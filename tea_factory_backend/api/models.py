@@ -47,3 +47,5 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Order by {self.customer_name} - {self.product.name}"
+
+# Reports Model (Analytics & Records)
