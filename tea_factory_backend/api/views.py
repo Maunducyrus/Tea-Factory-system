@@ -40,3 +40,10 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
     permission_classes = [permissions.IsAuthenticated]    
+
+# Register API
+@api_view(['POST'])
+def register_user(request):
+    username = request.data.get("username")
+    password = request.data.get("password")
+    email = request.data.get("email")    
