@@ -11,4 +11,8 @@ class ProductSerializer(serializers.ModelSerializer):
 class FarmerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Farmer
-        fields = '__all__'    
+        fields = '__all__'
+
+# Order Serializer
+class OrderSerializer(serializers.ModelSerializer):
+    product_name = serializers.ReadOnlyField(source='product.name')            
