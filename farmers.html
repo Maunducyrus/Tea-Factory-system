@@ -7,20 +7,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Custom CSS -->
 </head>
 <body>
+    <!-- Authentication Check -->
+    <script src="auth.js"></script>
+
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Gatundu Tea Factory</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- div section -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
@@ -30,15 +29,14 @@
                     <li class="nav-item"><a class="nav-link" href="index.html#orders">Orders</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#reports">Reports</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="#">Register</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-danger text-white" href="#" id="logoutBtn">Logout</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-
-
-    <section id="farmers" class="page-section">
+    <!-- Farmers Section -->
+    <section id="farmers" class="page-section mt-5 pt-4">
         <div class="container">
             <h2 class="text-center">👨‍🌾 Farmers Registration</h2>
 
@@ -64,7 +62,7 @@
             </form>
 
             <h3 class="text-center mt-5">📋 Registered Farmers</h3>
-            <input type="text" id="searchFarmer" class="form-control mb-3" placeholder="🔍 Search by Name or Location">
+            <input type="text" id="searchFarmer" class="form-control mb-3 w-50 mx-auto" placeholder="🔍 Search by Name or Location">
 
             <table class="table table-bordered table-striped">
                 <thead class="table-dark">
@@ -79,7 +77,7 @@
                     </tr>
                 </thead>
                 <tbody id="farmerTableBody">
-                    <!-- Farmers will be added here dynamically -->
+                    <!-- Farmers will be added dynamically -->
                 </tbody>
             </table>            
 
@@ -103,14 +101,16 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Gatundu Tea Factory. All Rights Reserved.</p>
             <p>Contact us: gatunduteafactory@gmail.com | +254 798087045</p>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="farmers.js"></script>
+    <script src="auth.js"></script> <!-- Authentication check -->
+    <script src="farmers.js"></script> <!-- Farmers script -->
 </body>
 </html>
