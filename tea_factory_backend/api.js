@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/api"; // Adjust based on your Django backend URL
+const API_URL = "http://127.0.0.1:8000/api"; // your Django backend URL
 
 // Register User
 async function registerUser(userData) {
