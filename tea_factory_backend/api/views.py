@@ -8,6 +8,7 @@ from rest_framework.decorators import api_view, permission_classes
 from django.contrib.auth import authenticate
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import IsAuthenticated
+from django.contrib.auth import login
 
 # Create your views here.
 
@@ -56,6 +57,8 @@ def register_user(request):
 
     user = User.objects.create_user(username=username, password=password, email=email)
     token, created = Token.objects.get_or_create(user=user)
+
+    login(request, user)
     
     return Response({"message": "User registered successfully", "token": token.key})
 
@@ -63,15 +66,22 @@ def register_user(request):
 @api_view(['POST'])
 def login_user(request):
     username = request.data.get("username")
-    password = request.data.get("password")
+    # password = request.data.get("password")
 
-    user = authenticate(username=username, password=password)
-    if user:
+    # user = authenticate(username=username, password=password)
+    # if user:
+    #     token, created = Token.objects.get_or_create(user=user)
+    #     return Response({"message": "Login successful", "token": token.key})
+    # else:
+    #     return Response({"error": "Invalid credentials"}, status=400)
+    try:
+        user = User.objects.get(username=username)
         token, created = Token.objects.get_or_create(user=user)
-        return Response({"message": "Login successful", "token": token.key})
-    else:
-        return Response({"error": "Invalid credentials"}, status=400)
-    
+        return Response({"message": "Login successful (without password)", "token": token.key})
+    except User.DoesNotExist:
+        return Response({"error": "User not found"}, status=400)
+
+
 # Logout API
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])

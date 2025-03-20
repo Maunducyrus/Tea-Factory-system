@@ -23,11 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: JSON.stringify({ username, email, password })
             });
 
+            const data = await response.json();
+
             if (response.ok) {
-                alert("Registration successful! Please log in.");
-                window.location.href = "login.html";
+                // Store token in localStorage
+                localStorage.setItem("token", data.token);
+                
+                alert("Registration successful! Redirecting to dashboard...");
+                window.location.href = "dashboard.html"; // Redirect user to dashboard
             } else {
-                alert("Registration failed. Please try again.");
+                alert(data.error || "Registration failed. Please try again.");
             }
         } catch (error) {
             console.error("Registration error:", error);

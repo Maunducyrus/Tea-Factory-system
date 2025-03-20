@@ -54,9 +54,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
+CORS_ALLOWED_ORIGINS =[
+        "http://127.0.0.1:5500",  # If using Live Server in VS Code
         "http://localhost:3000",  # If frontend runs on React/Vue
-        "http://127.0.0.1:5500",  # If frontend is just HTML/JS
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -138,3 +138,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',  # ✅ Use session-based login too
+    ],
+}

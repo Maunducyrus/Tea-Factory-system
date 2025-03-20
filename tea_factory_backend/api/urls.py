@@ -1,6 +1,8 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken.views import obtain_auth_token
 from .views import ProductViewSet, FarmerViewSet, OrderViewSet, ReportViewSet, UserProfileViewSet, register_user, login_user, logout_user
+
 
 router = DefaultRouter()
 router.register(r'products', ProductViewSet)
@@ -14,4 +16,5 @@ urlpatterns = [
     path('register/', register_user, name="register"),
     path('login/', login_user, name="login"),
     path('logout/', logout_user, name="logout"),
+    path("api/token/", obtain_auth_token, name="api_token_auth"), # Obtain token for authenticated user
 ]
