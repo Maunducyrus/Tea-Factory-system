@@ -272,10 +272,10 @@
  /* Footer Styles */
  .footer {
     background-color: #3f8205;
-    color: #ecf0f1;
+    color: white;
     padding: 20px 0;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
     width: 100%;
 }
 /* Orders Section */
