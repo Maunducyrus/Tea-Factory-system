@@ -9,6 +9,7 @@ from django.contrib.auth import authenticate
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.contrib.auth import login
+from rest_framework.generics import CreateAPIView
 
 # Create your views here.
 
