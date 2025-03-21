@@ -13,6 +13,21 @@ from rest_framework.generics import CreateAPIView
 
 # Create your views here.
 
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def dashboard(request):
+    total_orders = Order.objects.count()
+    pending_orders = Order.objects.filter(status="Pending").count()
+    completed_orders = Order.objects.filter(status="Delivered").count()
+    total_revenue = sum(order.total_price for order in Order.objects.filter(status="Delivered"))
+
+    return Response({
+        "total_orders": total_orders,
+        "pending_orders": pending_orders,
+        "completed_orders": completed_orders,
+        "total_revenue": total_revenue
+    })
+
 # Public Order Creation View
 class PublicOrderCreateView(CreateAPIView):
     queryset = Order.objects.all()

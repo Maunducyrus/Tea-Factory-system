@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 headers: { "Authorization": `Token ${token}` }
             });
             const data = await response.json();
+
+            //Debugging
+        if (data.length > 0) {
+            console.log("Sample order data:", data[0]);
+        }
+
             renderDashboard(data);
         } catch (error) {
             console.error("Error fetching dashboard data:", error);
@@ -43,6 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderOrders(orders) {
         orderTableBody.innerHTML = "";
         orders.forEach(order => {
+            // Handle different possible field names
+            const customerName = order.customer_name || "N/A";
+            const teaType = order.tea_type || order.product_name || order.product || "N/A";
+            const quantity = order.quantity || order.quantity_kg || "0";
+            const status = order.status || "pending";
+
             const newRow = document.createElement("tr");
             newRow.innerHTML = `
                 <td>${order.customer_name}</td>
