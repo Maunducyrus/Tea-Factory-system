@@ -4,17 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const orderTable = document.querySelector(".order-table tbody");
 
     const API_BASE_URL = "http://127.0.0.1:8000/api";
-    const token = localStorage.getItem("token");
-
-    if (!token) {
-        window.location.href = "login.html"; // Redirect if not logged in
-    }
 
     async function fetchOrders() {
         try {
-            const response = await fetch(`${API_BASE_URL}/orders/`, {
-                headers: { "Authorization": `Token ${token}` }
-            });
+            const response = await fetch(`${API_BASE_URL}/orders/`);
             const data = await response.json();
             renderOrders(data);
         } catch (error) {
@@ -53,8 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const response = await fetch(`${API_BASE_URL}/orders/`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Token ${token}`
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
                     customer_name: name,
@@ -86,8 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const orderId = event.target.getAttribute("data-id");
             try {
                 await fetch(`${API_BASE_URL}/orders/${orderId}/`, {
-                    method: "DELETE",
-                    headers: { "Authorization": `Token ${token}` }
+                    method: "DELETE"
                 });
                 alert("Order cancelled successfully.");
                 fetchOrders();

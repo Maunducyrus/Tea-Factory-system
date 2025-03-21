@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Factory System</title>
+    <!-- cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- external css - style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gatundu Tea Factory</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- div section -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="farmers.html">Farmers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#orders">Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reports">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="#">Officials</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>Welcome to Gatundu Tea Factory</h1>
+            <p>Premium Quality Tea, Fresh from the Farm to Your Cup</p>
+            <a href="#products" class="btn btn-primary">Explore Our Products</a>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>🌱 Organic Tea</h3>
+                <p>We source only the best organic tea leaves for a pure experience.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>🚚 Fast Delivery</h3>
+                <p>Enjoy quick and reliable delivery of fresh tea to your doorstep.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>📈 Farmer Support</h3>
+                <p>We empower local farmers with fair prices and sustainable practices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="page-section bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Column - Text Content -->
+                <div class="col-lg-6">
+                    <h2 class="text-primary fw-bold mb-4">About Us</h2>
+                    <p class="lead text-muted">
+                        Gatundu Tea Factory is committed to producing <strong>high-quality organic tea</strong>, supporting
+                        local farmers, and ensuring sustainable farming practices.
+                        Our tea is <strong>handpicked and processed with care</strong> to bring the freshest taste to your cup.
+                    </p>
+                    <p class="text-muted">
+                        We empower farmers by offering fair prices, modern training, and a global market reach.
+                        Join us in our mission to deliver premium tea while uplifting our farming communities.
+                    </p>
+                    <a href="#contact" class="btn btn-primary mt-3 px-4 py-2">Contact Us</a>
+                </div>
+    
+                <!-- Right Column - Image -->
+                <div class="col-lg-6 text-center">
+                    <img src="images/factory-.jpg" class="img-fluid about-img" alt="Tea Factory">
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Products Section -->
+<section id="products" class="page-section bg-light">
+    <div class="container">
+        <h2 class="text-center">Our Products</h2>
+        <p class="text-center">We offer a variety of premium tea products. Select your favorite and place an order!</p>
+
+        <!-- Product Grid -->
+        <div class="row">
+            <!-- Product Item 1 -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/blacktea 2.jpg" alt="Black Tea">
+                    <h4>Black Tea</h4>
+                    <p>Rich and aromatic black tea, sourced from the finest leaves.</p>
+                    <span class="price">Ksh 450 per Kg</span>
+                    <!-- <button class="btn btn-primary order-btn" data-product="Black Tea">Order Now</button> -->
+                    <button class="btn btn-primary add-to-cart" data-product="Black Tea" data-price="450">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Item 2 -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/greentea 2.jpg" alt="Green Tea">
+                    <h4>Green Tea</h4>
+                    <p>Fresh and natural green tea with a mild, soothing flavor.</p>
+                    <span class="price">Ksh 600 per Kg</span>
+                    <!-- <button class="btn btn-primary order-btn" data-product="Green Tea">Order Now</button> -->
+                    <button class="btn btn-primary add-to-cart" data-product="Green Tea" data-price="600">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Item 3 -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/herbaltea 1.jpg" alt="Herbal Tea">
+                    <h4>Herbal Tea</h4>
+                    <p>A blend of organic herbs for a refreshing and healthy drink.</p>
+                    <span class="price">Ksh 750 per Kg</span>
+                    <!-- <button class="btn btn-primary order-btn" data-product="Herbal Tea">Order Now</button> -->
+                    <button class="btn btn-primary add-to-cart" data-product="Herbal Tea" data-price="750">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Item 4 -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/oolongtea 1.jpg" alt="Oolong Tea">
+                    <h4>Oolong Tea</h4>
+                    <p>A semi-oxidized tea that combines the best of black and green tea.</p>
+                    <span class="price">Ksh 830 per Kg</span>
+                    <!-- <button class="btn btn-primary order-btn" data-product="Oolong Tea">Order Now</button> -->
+                    <button class="btn btn-primary add-to-cart" data-product="Oolong Tea" data-price="830">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Item 5 -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/whitetea 1.jpg" alt="White Tea">
+                    <h4>White Tea</h4>
+                    <p>Delicate and lightly fermented tea with natural sweetness.</p>
+                    <span class="price">Ksh 900 per Kg</span>
+                    <!-- <button class="btn btn-primary order-btn" data-product="White Tea">Order Now</button> -->
+                    <button class="btn btn-primary add-to-cart" data-product="White Tea" data-price="900">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Item 6 -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/masala tea 1.jpg" alt="Masala Tea">
+                    <h4>Masala Tea</h4>
+                    <p>Spiced tea infused with aromatic herbs and spices.</p>
+                    <span class="price">Ksh 1200 per Kg</span>
+                    <!-- <button class="btn btn-primary order-btn" data-product="Masala Tea">Order Now</button> -->
+                    <button class="btn btn-primary add-to-cart" data-product="Masala Tea" data-price="1200">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Item 7 -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/matcha tea 2.jpg" alt="Matcha Tea">
+                    <h4>Matcha Tea</h4>
+                    <p>Finely ground green tea powder, rich in antioxidants.</p>
+                    <span class="price">Ksh 1250 per Kg</span>
+                    <!-- <button class="btn btn-primary order-btn" data-product="Matcha Tea">Order Now</button> -->
+                    <button class="btn btn-primary add-to-cart" data-product="Matcha Tea" data-price="1250">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Item 8 -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/fruit tea 2.jpg" alt="Fruit Tea">
+                    <h4>Fruit Tea</h4>
+                    <p>A fruity blend of dried fruits and herbs for a refreshing taste.</p>
+                    <span class="price">Ksh 1350 per Kg</span>
+                    <!-- <button class="btn btn-primary order-btn" data-product="Fruit Tea">Order Now</button> -->
+                    <button class="btn btn-primary add-to-cart" data-product="Fruit Tea" data-price="1350">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Orders Section -->
+ <section id="orders" class="page-section bg-light">
+    <div class="container order-container">
+        <h2 class="text-center">Place Your Order</h2>
+        <p class="text-center">Order your favorite tea easily.</p>
+
+        <!-- Search bar -->
+        <div class="mb-3">
+            <label for="searchOrder" class="form-label">Search Orders</label>
+            <input type="text" id="searchOrder" placeholder="Search order by name" class="form-control">
+        </div>
+
+        <!-- Order Form -->
+        <form class="order-form">
+            <div class="mb-3">
+                <label for="customerName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="customerName" placeholder="Enter your full name" required>
+            </div>
+            <div class="mb-3">
+                <label for="customerPhone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="customerPhone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="mb-3">
+                <label for="teaType" class="form-label">Tea Type</label>
+                <select class="form-control" id="teaType">
+                    <option>Black Tea</option>
+                    <option>Green Tea</option>
+                    <option>Herbal Tea</option>
+                    <option>Oolong Tea</option>
+                    <option>White Tea</option>
+                    <option>Masala Tea</option>
+                    <option>Matcha Tea</option>
+                    <option>Fruit Tea</option>     
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="quantity" class="form-label">Quantity (Kg)</label>
+                <input type="number" class="form-control" id="quantity" placeholder="Enter quantity" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Place Order</button>
+            </div>
+        </form>
+
+            <!-- Farmers Section -->
+    <section id="farmers" class="page-section mt-5 pt-4">
+        <div class="container">
+            <h2 class="text-center">👨‍🌾 Farmers Registration</h2>
+
+            <!-- Farmer Registration Form -->
+            <form id="farmerForm" class="farmer-form shadow p-4 rounded">
+                <div class="mb-3">
+                    <label for="farmerName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="farmerName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="farmerPhone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="farmerPhone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="farmerLocation" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="farmerLocation" required>
+                </div>
+                <div class="mb-3">
+                    <label for="teaCapacity" class="form-label">Tea Supply Capacity (Kg)</label>
+                    <input type="number" class="form-control" id="teaCapacity" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Register Farmer</button>
+            </form>
+
+            <h3 class="text-center mt-5">📋 Registered Farmers</h3>
+            <input type="text" id="searchFarmer" class="form-control mb-3 w-50 mx-auto" placeholder="🔍 Search by Name or Location">
+
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Location</th>
+                        <th>Supply Capacity</th>
+                        <th>Total Tea Supplied</th>
+                        <th>Payment (Ksh)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="farmerTableBody">
+                    <!-- Farmers will be added dynamically -->
+                </tbody>
+            </table>            
+
+            <!-- Tea Supply Form -->
+            <h3 class="text-center mt-5">🌱 Log Tea Supply</h3>
+            <form id="supplyForm" class="shadow p-4 rounded">
+                <div class="mb-3">
+                    <label for="farmerSelect" class="form-label">Select Farmer</label>
+                    <select class="form-control" id="farmerSelect" required></select>
+                </div>
+                <div class="mb-3">
+                    <label for="supplyDate" class="form-label">Supply Date</label>
+                    <input type="date" class="form-control" id="supplyDate" required>
+                </div>
+                <div class="mb-3">
+                    <label for="supplyQuantity" class="form-label">Quantity (Kg)</label>
+                    <input type="number" class="form-control" id="supplyQuantity" required>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Add Supply</button>
+            </form>
+        </div>
+    </section>
+
+        <!-- Contact Section -->
+       <section id="contact" class="page-section bg-light">
+        <h2>CONTACT US</h2>
+        <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+        <div class="container">
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Gatundu Tea Factory. All Rights Reserved.</p>
+            <p>Contact us: gatunduteafactory@gmail.com | +254 798087045</p>
+        </div>
+    </footer>
+    <!-- html2pdf Library for PDF Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+    <!-- reports js -->
+    <script src="reports.js"></script>
+
+    <!-- js for the main page -->
+    <script src="Styles/main.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js
+
+
+
+/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
