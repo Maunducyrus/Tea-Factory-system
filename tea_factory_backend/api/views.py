@@ -19,8 +19,8 @@ class PublicOrderCreateView(CreateAPIView):
     serializer_class = OrderSerializer
     permission_classes = [AllowAny]
     
-    def perform_create(self, serializer):
-        serializer.save()
+    # def perform_create(self, serializer):
+    #     serializer.save()
 
 # Product ViewSet (CRUD for Products)
 class ProductViewSet(viewsets.ModelViewSet):

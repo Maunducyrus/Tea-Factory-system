@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     body: JSON.stringify({
                         customer_name: name,
                         phone_number: phone,
-                        tea_type: teaType,
-                        quantity: quantity
+                        product: teaType,
+                        quantity_kg: quantity
                     })
                 });
                 // Check if response is ok
