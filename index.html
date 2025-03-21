@@ -89,9 +89,8 @@
             </div>
         </div>
     </section>
-    
 
-    <!-- Products Section -->
+     <!-- Products Section -->
 <section id="products" class="page-section bg-light">
     <div class="container">
         <h2 class="text-center">Our Products</h2>
@@ -198,119 +197,8 @@
     </div>
 </section>
 
-<!-- Displaying my cart -->
-
- <!-- Cart Section -->
-<section id="cart" class="page-section">
-    <h2 class="text-center">🛒 Your Cart</h2>
-    <ul id="cartItems" class="list-group"></ul>
-    <h4 class="text-center mt-3">Total: <span id="cartTotal">$0.00</span></h4>
-</section>
-
-    <!-- Reports Section -->
-    <!-- <section id="reports" class="page-section">
-        <h2>Reports</h2>
-        <p>Access detailed reports on tea production, sales, and farmer contributions.</p>
-    </section> -->
-    <section id="reports" class="page-section bg-light py-5">
-        <div class="container">
-            <h2 class="text-center text-primary fw-bold mb-4">Reports & Analytics</h2>
-    
-            <!-- Search & Filter -->
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <label for="searchReport" class="form-label">🔍 Search Report:</label>
-                    <input type="text" id="searchReport" class="form-control" placeholder="Search by name or tea type">
-                </div>
-                <div class="col-md-6">
-                    <label for="dateFilter" class="form-label">📅 Select Date Range:</label>
-                    <input type="date" id="dateFilter" class="form-control">
-                </div>
-            </div>
-    
-            <!-- Sales Summary Table -->
-            <div class="card shadow p-4 mb-4">
-                <h4 class="text-success">📊 Sales Summary</h4>
-                <table class="table table-bordered table-striped mt-3" id="salesTable">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Tea Type</th>
-                            <th>Total Sold (Kg)</th>
-                            <th>Revenue ($)</th>
-                            <th>Pending Orders</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Black Tea</td>
-                            <td>1,200 Kg</td>
-                            <td>$24,000</td>
-                            <td>12</td>
-                        </tr>
-                        <tr>
-                            <td>Green Tea</td>
-                            <td>900 Kg</td>
-                            <td>$18,500</td>
-                            <td>8</td>
-                        </tr>
-                        <tr>
-                            <td>Herbal Tea</td>
-                            <td>750 Kg</td>
-                            <td>$15,000</td>
-                            <td>5</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-    
-            <!-- Farmer Contributions Table -->
-            <div class="card shadow p-4 mb-4">
-                <h4 class="text-info">🌱 Farmer Contributions</h4>
-                <table class="table table-bordered table-striped mt-3">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Farmer Name</th>
-                            <th>Tea Supplied (Kg)</th>
-                            <th>Last Supply Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Antony Munyao</td>
-                            <td>600 Kg</td>
-                            <td>Feb 10, 2025</td>
-                        </tr>
-                        <tr>
-                            <td>Patrick Maina</td>
-                            <td>450 Kg</td>
-                            <td>Feb 12, 2025</td>
-                        </tr>
-                        <tr>
-                            <td>Chris Kimotho</td>
-                            <td>300 Kg</td>
-                            <td>Feb 15, 2025</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-    
-            <!-- Monthly Sales Chart -->
-            <div class="card shadow p-4 mb-4">
-                <h4 class="text-warning text-center">📈 Monthly Sales Trends</h4>
-                <canvas id="salesChart"></canvas>
-            </div>
-    
-            <!-- Export Report Buttons -->
-            <div class="text-center mt-4">
-                <button class="btn btn-success px-4 py-2" onclick="exportToCSV()">📥 Export CSV</button>
-                <button class="btn btn-primary px-4 py-2" onclick="exportToPDF()">📄 Export PDF</button>
-            </div>
-        </div>
-    </section>
-    <!-- End: reports.html -->
-
-    <!-- Orders Section -->
-<section id="orders" class="page-section bg-light">
+ <!-- Orders Section -->
+ <section id="orders" class="page-section bg-light">
     <div class="container order-container">
         <h2 class="text-center">Place Your Order</h2>
         <p class="text-center">Order your favorite tea easily.</p>
@@ -353,56 +241,72 @@
             </div>
         </form>
 
-        <!-- Order Summary -->
-        <h3 class="text-center mt-5">Recent Orders</h3>
-        <table class="table order-table table-bordered table-striped mt-3">
-            <thead class="table-dark">
-                <tr>
-                    <th>Name</th>
-                    <th>Tea Type</th>
-                    <th>Quantity</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Antony Munyao</td>
-                    <td>Black Tea</td>
-                    <td>5 Kg</td>
-                    <td><span class="badge bg-success">Delivered</span></td>
-                </tr>
-                <tr>
-                    <td>Patrick Maina</td>
-                    <td>Green Tea</td>
-                    <td>2 Kg</td>
-                    <td><span class="badge bg-warning">Pending</span></td>
-                </tr>
-                <tr>
-                    <td>Chris Kimotho</td>
-                    <td>Herbal Tea</td>
-                    <td>3 Kg</td>
-                    <td><span class="badge bg-danger">Cancelled</span></td>
-                </tr>
-                <tr>
-                    <td>Godwin Burudi</td>
-                    <td>Green Tea</td>
-                    <td>6 Kg</td>
-                    <td><span class="badge bg-warning">Pending</span></td>
-                </tr>
-                <tr>
-                    <td>Einstein Githaka</td>
-                    <td>Black Tea</td>
-                    <td>8 Kg</td>
-                    <td><span class="badge bg-success">Delivered</span></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
+            <!-- Farmers Section -->
+    <section id="farmers" class="page-section mt-5 pt-4">
+        <div class="container">
+            <h2 class="text-center">👨‍🌾 Farmers Registration</h2>
 
+            <!-- Farmer Registration Form -->
+            <form id="farmerForm" class="farmer-form shadow p-4 rounded">
+                <div class="mb-3">
+                    <label for="farmerName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="farmerName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="farmerPhone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="farmerPhone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="farmerLocation" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="farmerLocation" required>
+                </div>
+                <div class="mb-3">
+                    <label for="teaCapacity" class="form-label">Tea Supply Capacity (Kg)</label>
+                    <input type="number" class="form-control" id="teaCapacity" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Register Farmer</button>
+            </form>
 
-       <!-- Contact Section -->
+            <!-- <h3 class="text-center mt-5">📋 Registered Farmers</h3>
+            <input type="text" id="searchFarmer" class="form-control mb-3 w-50 mx-auto" placeholder="🔍 Search by Name or Location">
+
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Location</th>
+                        <th>Supply Capacity</th>
+                        <th>Total Tea Supplied</th>
+                        <th>Payment (Ksh)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="farmerTableBody">
+                </tbody>
+            </table>             -->
+
+            <!-- Tea Supply Form -->
+            <h3 class="text-center mt-5">🌱 Log Tea Supply</h3>
+            <form id="supplyForm" class="shadow p-4 rounded">
+                <div class="mb-3">
+                    <label for="farmerSelect" class="form-label">Select Farmer</label>
+                    <select class="form-control" id="farmerSelect" required></select>
+                </div>
+                <div class="mb-3">
+                    <label for="supplyDate" class="form-label">Supply Date</label>
+                    <input type="date" class="form-control" id="supplyDate" required>
+                </div>
+                <div class="mb-3">
+                    <label for="supplyQuantity" class="form-label">Quantity (Kg)</label>
+                    <input type="number" class="form-control" id="supplyQuantity" required>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Add Supply</button>
+            </form>
+        </div>
+    </section>
+
+        <!-- Contact Section -->
        <section id="contact" class="page-section bg-light">
         <h2>CONTACT US</h2>
         <p>Fill out the form below and we'll get back to you as soon as possible.</p>
