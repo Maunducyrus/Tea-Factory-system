@@ -98,6 +98,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         quantity: quantity
                     })
                 });
+                // Check if response is ok
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(`API error: ${JSON.stringify(errorData)}`);
+                }
+
                 const data = await response.json();
                 alert("Order placed successfully!");
                 orderForm.reset();
