@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const API_BASE_URL = "http://127.0.0.1:8000/api";
     
     // Only run order table code if we're on the dashboard page
-    
+
     // if (orderTable) {
     //     async function fetchOrders() {
     //         try {
@@ -78,6 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             
             try {
+                // Add console logs to debug
+                console.log("Sending order data:", {
+                    customer_name: name,
+                    phone_number: phone,
+                    tea_type: teaType,
+                    quantity: quantity
+                });
+
                 const response = await fetch(`${API_BASE_URL}/orders/`, {
                     method: "POST",
                     headers: {
