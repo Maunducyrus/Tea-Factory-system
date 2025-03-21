@@ -37,8 +37,7 @@ class Order(models.Model):
 
     customer_name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=15)
-    # product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    tea_type = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity_kg = models.PositiveIntegerField()
     # total_price = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Pending')
