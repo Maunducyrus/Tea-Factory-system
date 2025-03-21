@@ -5,61 +5,63 @@ document.addEventListener("DOMContentLoaded", function () {
     const API_BASE_URL = "http://127.0.0.1:8000/api";
     
     // Only run order table code if we're on the dashboard page
-    if (orderTable) {
-        async function fetchOrders() {
-            try {
-                const response = await fetch(`${API_BASE_URL}/orders/`);
-                const data = await response.json();
-                renderOrders(data);
-            } catch (error) {
-                console.error("Error fetching orders:", error);
-            }
-        }
+    
+    // if (orderTable) {
+    //     async function fetchOrders() {
+    //         try {
+    //             const response = await fetch(`${API_BASE_URL}/orders/`);
+    //             const data = await response.json();
+    //             renderOrders(data);
+    //         } catch (error) {
+    //             console.error("Error fetching orders:", error);
+    //         }
+    //     }
         
-        function renderOrders(orders) {
-            orderTable.innerHTML = "";
-            orders.forEach(order => {
-                const newRow = document.createElement("tr");
-                newRow.innerHTML = `
-                    <td>${order.customer_name}</td>
-                    <td>${order.tea_type}</td>
-                    <td>${order.quantity} Kg</td>
-                    <td><span class="badge bg-warning">${order.status}</span></td>
-                    <td><button class="btn btn-danger btn-sm cancel-btn" data-id="${order.id}">Cancel</button></td>
-                `;
-                orderTable.appendChild(newRow);
-            });
-        }
+    //     function renderOrders(orders) {
+    //         orderTable.innerHTML = "";
+    //         orders.forEach(order => {
+    //             const newRow = document.createElement("tr");
+    //             newRow.innerHTML = `
+    //                 <td>${order.customer_name}</td>
+    //                 <td>${order.tea_type}</td>
+    //                 <td>${order.quantity} Kg</td>
+    //                 <td><span class="badge bg-warning">${order.status}</span></td>
+    //                 <td><button class="btn btn-danger btn-sm cancel-btn" data-id="${order.id}">Cancel</button></td>
+    //             `;
+    //             orderTable.appendChild(newRow);
+    //         });
+    //     }
         
         // Only add event listeners if elements exist
-        if (searchInput) {
-            searchInput.addEventListener("input", function () {
-                const searchText = searchInput.value.toLowerCase();
-                const rows = orderTable.getElementsByTagName("tr");
-                for (let row of rows) {
-                    const name = row.cells[0]?.textContent.toLowerCase() || "";
-                    row.style.display = name.includes(searchText) ? "" : "none";
-                }
-            });
-        }
+
+    //     if (searchInput) {
+    //         searchInput.addEventListener("input", function () {
+    //             const searchText = searchInput.value.toLowerCase();
+    //             const rows = orderTable.getElementsByTagName("tr");
+    //             for (let row of rows) {
+    //                 const name = row.cells[0]?.textContent.toLowerCase() || "";
+    //                 row.style.display = name.includes(searchText) ? "" : "none";
+    //             }
+    //         });
+    //     }
         
-        orderTable.addEventListener("click", async function (event) {
-            if (event.target.classList.contains("cancel-btn")) {
-                const orderId = event.target.getAttribute("data-id");
-                try {
-                    await fetch(`${API_BASE_URL}/orders/${orderId}/`, {
-                        method: "DELETE"
-                    });
-                    alert("Order cancelled successfully.");
-                    fetchOrders();
-                } catch (error) {
-                    console.error("Error cancelling order:", error);
-                }
-            }
-        });
+    //     orderTable.addEventListener("click", async function (event) {
+    //         if (event.target.classList.contains("cancel-btn")) {
+    //             const orderId = event.target.getAttribute("data-id");
+    //             try {
+    //                 await fetch(`${API_BASE_URL}/orders/${orderId}/`, {
+    //                     method: "DELETE"
+    //                 });
+    //                 alert("Order cancelled successfully.");
+    //                 fetchOrders();
+    //             } catch (error) {
+    //                 console.error("Error cancelling order:", error);
+    //             }
+    //         }
+    //     });
         
-        fetchOrders();
-    }
+    //     fetchOrders();
+    // }
     
     // Order form submission - keep this on the main page
     if (orderForm) {
