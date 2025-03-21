@@ -19,8 +19,29 @@ class PublicOrderCreateView(CreateAPIView):
     serializer_class = OrderSerializer
     permission_classes = [AllowAny]
     
-    # def perform_create(self, serializer):
-    #     serializer.save()
+    # Allow any user to create an order
+    def create(self, request, *args, **kwargs):
+        # Get the data from the request
+        data = request.data.copy()
+        
+        # If product is provided as a string (name), look up the product ID
+        if 'product' in data and isinstance(data['product'], str):
+            try:
+                product = Product.objects.get(name=data['product'])
+                data['product'] = product.id
+            except Product.DoesNotExist:
+                return Response(
+                    {"product": [f"Product with name '{data['product']}' does not exist."]},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+        
+        # Create a serializer with the modified data
+        serializer = self.get_serializer(data=data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        
+        headers = self.get_success_headers(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 
 # Product ViewSet (CRUD for Products)
 class ProductViewSet(viewsets.ModelViewSet):
