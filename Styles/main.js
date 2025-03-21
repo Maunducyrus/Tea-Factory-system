@@ -105,10 +105,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 const data = await response.json();
+                console.log("Order response:", data);
                 alert("Order placed successfully!");
                 orderForm.reset();
             } catch (error) {
                 console.error("Error placing order:", error);
+                alert("Failed to place order. Please try again later.");
             }
         });
     }
