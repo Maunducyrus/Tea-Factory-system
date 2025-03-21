@@ -78,6 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             
             try {
+                // Get api 
+                // const apiKey = "http://127.0.0.1:8000/api/orders/";
+
                 // Add console logs to debug
                 console.log("Sending order data:", {
                     customer_name: name,

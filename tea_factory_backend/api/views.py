@@ -30,6 +30,14 @@ class OrderViewSet(viewsets.ModelViewSet):
     serializer_class = OrderSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+    # allowing all people place orders
+    def get_permission(self):
+        if self.action == 'create':
+            permission_classes = [permissions.AllowAny]
+        else:
+            permission_classes = [permissions.IsAuthenticated]
+        return [permission() for permission in permission_classes]
+
 # Report ViewSet (CRUD for Reports)
 class ReportViewSet(viewsets.ModelViewSet):
     queryset = Report.objects.all()
