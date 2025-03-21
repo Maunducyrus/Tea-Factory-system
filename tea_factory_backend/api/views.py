@@ -12,6 +12,15 @@ from django.contrib.auth import login
 
 # Create your views here.
 
+# Public Order Creation View
+class PublicOrderCreateView(CreateAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+    permission_classes = [AllowAny]
+    
+    def perform_create(self, serializer):
+        serializer.save()
+
 # Product ViewSet (CRUD for Products)
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
