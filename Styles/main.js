@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     quantity: quantity
                 });
 
-                const response = await fetch(`${API_BASE_URL}/orders/`, {
+                const response = await fetch(`${API_BASE_URL}/public-order-create/`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
