@@ -19,4 +19,5 @@ urlpatterns = [
     path("api/token/", obtain_auth_token, name="api_token_auth"), # Obtain token for authenticated user
     path('public-order-create/', PublicOrderCreateView.as_view(), name='public-order-create'),
     path('dashboard/', dashboard, name='dashboard'),
+    path('api/farmers/', get_farmers, name='get-farmers'),
 ]
