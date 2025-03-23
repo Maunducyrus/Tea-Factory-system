@@ -197,7 +197,7 @@
 </section>
 
  <!-- Orders Section -->
- <section id="orders" class="page-section bg-light">
+<section id="orders" class="page-section bg-light">
     <div class="container order-container">
         <h2 class="text-center">Place Your Order</h2>
         <p class="text-center">Order your favorite tea easily.</p>
@@ -349,7 +349,24 @@
     </div>
 </footer>
 
-    
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("http://127.0.0.1:8000/api/farmers/")
+            .then(response => response.json())
+            .then(data => {
+                let farmersList = document.getElementById("farmers-list");
+                farmersList.innerHTML = ""; // Clear existing content
+
+                data.forEach(farmer => {
+                    let listItem = document.createElement("li");
+                    listItem.textContent = `${farmer.name} - ${farmer.location}`;
+                    farmersList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error("Error fetching farmers:", error));
+    });
+</script>
+
 </body>
 </html>
 
