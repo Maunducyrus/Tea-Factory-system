@@ -19,7 +19,8 @@ class OrderSerializer(serializers.ModelSerializer):
     Product.name = serializers.ReadOnlyField(source='product.name')            
     class Meta:
         model = Order
-        fields = '__all__'
+        fields = ['customer_name', 'phone_number', 'product', 'product_name', 'quantity_kg', 'total_price', 'status']
+        # fields = '__all__'
 
 # Report Serializer
 class ReportSerializer(serializers.ModelSerializer):

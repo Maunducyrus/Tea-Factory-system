@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const newRow = document.createElement("tr");
             newRow.innerHTML = `
                 <td>${order.customer_name}</td>
-                <td>${order.tea_type}</td>
+                <td>${order.product}</td>
                 <td>${order.quantity} Kg</td>
                 <td>
                     <select class="form-select status-select" data-id="${order.id}">
