@@ -283,11 +283,11 @@
 
         farmers.forEach(farmer => {
             // Ensure a valid image URL
-            const imageUrl = farmer.image ? `http://127.0.0.1:8000${farmer.image}` : 'default-image.png';
+            const imageUrl = farmer.image ? `http://127.0.0.1:8000${farmer.image}` : 'default-image.jpg';
 
             const farmerCard = `
                 <div class="farmer-card">
-                    <img src="${imageUrl}" alt="Farmer Image" class="farmer-img">
+                    <img src="${farmer.image}" alt="Farmer Image" class="farmer-img">
                     <h3>${farmer.name}</h3>
                     <p>Phone: ${farmer.phone_number}</p>
                     <p>Email: ${farmer.email}</p>
