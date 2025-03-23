@@ -5,7 +5,7 @@ from .models import Product, Farmer, Order, Report, UserProfile
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ['id', 'name', 'tea_type']
+        fields = ['id', 'name', 'tea_type', 'quantity_kg']
         # fields = '__all__'
 
 # Farmer Serializer
