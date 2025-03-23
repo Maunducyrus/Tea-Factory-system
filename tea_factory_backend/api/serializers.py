@@ -16,7 +16,8 @@ class FarmerSerializer(serializers.ModelSerializer):
 # Order Serializer
 class OrderSerializer(serializers.ModelSerializer):
     # changes made - changed product_name to tea_type_name
-    Product_name = serializers.ReadOnlyField(source='product.name', read_only='True')           
+    # product_name = serializers.ReadOnlyField(source='product.name', read_only='True')           
+    tea_type = serializers.CharField(source='product.tea_type', read_only=True)  # ✅ Get the actual name
     class Meta:
         model = Order
         fields = ['customer_name', 'phone_number', 'product', 'product_name', 'quantity_kg', 'total_price', 'status', 'order_date']
