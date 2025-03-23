@@ -24,6 +24,7 @@ class Farmer(models.Model):
     email = models.EmailField(unique=True, null=True, blank=True)
     location = models.CharField(max_length=200)
     total_supplied_kg = models.PositiveIntegerField(default=0)
+    image = models.ImageField(upload_to='farmer_images/', null=True, blank=True)
 
     def __str__(self):
         return self.name
