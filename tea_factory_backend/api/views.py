@@ -68,7 +68,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 class FarmerViewSet(viewsets.ModelViewSet):
     queryset = Farmer.objects.all()
     serializer_class = FarmerSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
 
 # Order ViewSet (CRUD for Orders)
 class OrderViewSet(viewsets.ModelViewSet):
