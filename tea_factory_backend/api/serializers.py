@@ -19,7 +19,7 @@ class OrderSerializer(serializers.ModelSerializer):
     Product.name = serializers.ReadOnlyField(source='product.name')            
     class Meta:
         model = Order
-        # fields = '__all__'
+        fields = '__all__'
 
 # Report Serializer
 class ReportSerializer(serializers.ModelSerializer):
