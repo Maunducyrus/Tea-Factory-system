@@ -4,7 +4,7 @@ from .models import Product, Farmer, Order, Report, UserProfile
 # Product Serializer
 class ProductSerializer(serializers.ModelSerializer):
     image = serializers.ImageField(required=False)
-    
+
     class Meta:
         model = Product
         fields = ['id', 'name', 'tea_type', 'quantity_kg']
@@ -12,9 +12,18 @@ class ProductSerializer(serializers.ModelSerializer):
 
 # Farmer Serializer
 class FarmerSerializer(serializers.ModelSerializer):
+    image = serializers.SerializerMethodField()
+
+    def get_image(self, obj):
+        request = self.context.get('request')
+        if obj.image:
+            return request.build_absolute_uri(obj.image.url)
+        return None
+
     class Meta:
         model = Farmer
-        fields = '__all__'
+        # fields = '__all__'
+        fields = ['id', 'name', 'phone_number', 'email', 'location', 'total_supplied_kg', 'image']
 
 # Order Serializer
 class OrderSerializer(serializers.ModelSerializer):
