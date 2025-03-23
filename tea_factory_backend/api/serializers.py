@@ -16,10 +16,10 @@ class FarmerSerializer(serializers.ModelSerializer):
 # Order Serializer
 class OrderSerializer(serializers.ModelSerializer):
     # changes made - changed product_name to tea_type_name
-    Product.name = serializers.ReadOnlyField(source='product.name')            
+    Product_name = serializers.ReadOnlyField(source='product.name', read_only='True')           
     class Meta:
         model = Order
-        fields = ['customer_name', 'phone_number', 'product', 'product_name', 'quantity_kg', 'total_price', 'status']
+        fields = ['customer_name', 'phone_number', 'product', 'product_name', 'quantity_kg', 'total_price', 'status', 'order_date']
         # fields = '__all__'
 
 # Report Serializer
