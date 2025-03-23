@@ -150,4 +150,7 @@ REST_FRAMEWORK = {
     ],
 }
 
-
+# Serve media files in development
+# if DEBUG:
+#     from django.conf.urls.static import static
+#     urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
