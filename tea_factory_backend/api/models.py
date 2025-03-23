@@ -10,7 +10,7 @@ class Product(models.Model):
     tea_type = models.CharField(max_length=255, default="Black Tea")
     description = models.TextField()
     price_per_kg = models.DecimalField(max_digits=10, decimal_places=2)
-    # stock_quantity = models.PositiveIntegerField(default=0)
+    stock_quantity = models.PositiveIntegerField(default=0)
     quantity_kg = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
 
