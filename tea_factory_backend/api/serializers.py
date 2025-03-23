@@ -20,7 +20,7 @@ class OrderSerializer(serializers.ModelSerializer):
     tea_type = serializers.CharField(source='product.tea_type', read_only=True)  # ✅ Get the actual name
     class Meta:
         model = Order
-        fields = ['customer_name', 'phone_number', 'product', 'product_name', 'tea_type' 'quantity_kg', 'total_price', 'status', 'order_date']
+        fields = ['customer_name', 'phone_number', 'product', 'product_name', 'tea_type', 'quantity_kg', 'total_price', 'status', 'order_date']
         # fields = '__all__'
 
 # Report Serializer
