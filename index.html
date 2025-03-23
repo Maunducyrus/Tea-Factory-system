@@ -267,8 +267,38 @@
             </form> -->
 
             <!-- Getting farmers added from admin panel -->
-            <h3 class="text-center mt-5">📋 Registered Farmers</h3>
-            <ul id="farmers-list"></ul>
+<h3 class="text-center mt-5">📋 Registered Farmers</h3>
+<!-- <ul id="farmers-list"></ul> -->
+<div id="farmers-container"></div>
+
+<script>
+    async function fetchFarmers() {
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/farmers/');
+            const farmers = await response.json();
+            const container = document.getElementById('farmers-container');
+            container.innerHTML = '';
+
+            farmers.forEach(farmer => {
+                const farmerCard = `
+                    <div class="farmer-card">
+                        <img src="http://127.0.0.1:8000/media/${farmer.image}" alt="Farmer Image" class="farmer-img">
+                        <h3>${farmer.name}</h3>
+                        <p>Phone: ${farmer.phone_number}</p>
+                        <p>Email: ${farmer.email}</p>
+                        <p>Location: ${farmer.location}</p>
+                        <p>Total Supplied: ${farmer.total_supplied_kg} kg</p>
+                    </div>
+                `;
+                container.innerHTML += farmerCard;
+            });
+        } catch (error) {
+            console.error('Error fetching farmers:', error);
+        }
+    }
+
+    fetchFarmers();
+</script>
 
 
             <!-- <h3 class="text-center mt-5">📋 Registered Farmers</h3>
@@ -354,36 +384,7 @@
     </div>
 </footer>
 
-<div id="farmers-container"></div>
 
-<script>
-    async function fetchFarmers() {
-        try {
-            const response = await fetch('http://127.0.0.1:8000/api/farmers/');
-            const farmers = await response.json();
-            const container = document.getElementById('farmers-container');
-            container.innerHTML = '';
-
-            farmers.forEach(farmer => {
-                const farmerCard = `
-                    <div class="farmer-card">
-                        <img src="http://127.0.0.1:8000/media/${farmer.image}" alt="Farmer Image" class="farmer-img">
-                        <h3>${farmer.name}</h3>
-                        <p>Phone: ${farmer.phone_number}</p>
-                        <p>Email: ${farmer.email}</p>
-                        <p>Location: ${farmer.location}</p>
-                        <p>Total Supplied: ${farmer.total_supplied_kg} kg</p>
-                    </div>
-                `;
-                container.innerHTML += farmerCard;
-            });
-        } catch (error) {
-            console.error('Error fetching farmers:', error);
-        }
-    }
-
-    fetchFarmers();
-</script>
 
 </body>
 </html>
