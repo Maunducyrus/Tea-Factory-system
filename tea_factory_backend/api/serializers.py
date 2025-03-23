@@ -3,6 +3,8 @@ from .models import Product, Farmer, Order, Report, UserProfile
 
 # Product Serializer
 class ProductSerializer(serializers.ModelSerializer):
+    image = serializers.ImageField(required=False)
+    
     class Meta:
         model = Product
         fields = ['id', 'name', 'tea_type', 'quantity_kg']
