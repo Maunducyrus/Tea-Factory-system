@@ -143,5 +143,11 @@ def logout_user(request):
     request.auth.delete()
     return Response({"message": "Logout successful"})    
 
-    
+# Fetching farmers from backend to frontend
+@api_view(['GET'])
+
+def get_farmers(request):
+    farmers = Farmer.objects.all()
+    serializer = FarmerSerializer(farmers, many=True)
+    return Response(serializer.data) 
 
