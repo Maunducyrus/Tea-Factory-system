@@ -7,6 +7,7 @@ from django.dispatch import receiver
 
 class Product(models.Model):
     name = models.CharField(max_length=100, unique=True)
+    tea_type = models.CharField(max_length=50)
     description = models.TextField()
     price_per_kg = models.DecimalField(max_digits=10, decimal_places=2)
     stock_quantity = models.PositiveIntegerField(default=0)
