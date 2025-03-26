@@ -17,5 +17,7 @@ python manage.py createsuperuser
 
 python manage.py runserver
 
+pip install mysqlclient
+
 pip install pillow
 
